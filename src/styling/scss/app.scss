@@ -25,6 +25,11 @@ h2 {
 p {
   font-size: 1rem;
   font-weight: 300;
+
+  strong {
+    font-weight: 700;
+    color: $light-blue;
+  }
 }
 
 a {
@@ -84,7 +89,6 @@ a {
 
 .about-me {
   height: 100vh;
-  border: 1px solid red;
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -94,28 +98,30 @@ a {
 
   .image {
     width: 100%;
-    padding: 1.25rem;
+    padding: 1rem;
     position: relative;
 
-    .image-shadow {
-      width: 100%;
-      background: $light-blue 10%;
-      position: relative;
-      bottom: 1rem;
-      right: 1rem;
+    &::before {
+      content: "";
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: calc(100% - 2rem);
+      height: calc(100% - 2rem);
+      background-color: $light-blue;
+      opacity: 10%;
     }
 
     img {
       position: relative;
-      top: 1rem;
-      left: 1rem;
+      z-index: 1;
       width: 100%;
     }
 
     .vertical {
       height: 8px;
       width: 30%;
-      background-color: blue;
+      background-color: $light-blue;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -123,7 +129,7 @@ a {
     .horizontal {
       height: 30%;
       width: 8px;
-      background-color: blue;
+      background-color: $light-blue;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -133,6 +139,27 @@ a {
   .text {
     padding: 1rem;
     margin: 0 auto;
+
+    h2 {
+      position: relative;
+      width: fit-content;
+    }
+
+    .header-container {
+      width: fit-content;
+      position: relative;
+      &::before {
+        content: "";
+        width: 90%;
+        height: 100%;
+        background: $light-blue;
+        opacity: 10%;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        z-index: 0;
+      }
+    }
 
     p {
       margin: 1rem 0;
