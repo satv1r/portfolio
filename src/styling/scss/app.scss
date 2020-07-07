@@ -1,1 +1,141 @@
 @import "setup";
+
+$light-color: #ffffff;
+$primary-blue: #2aa4e8;
+$dark-blue: #0c214a;
+$light-blue: #2aa4e8; // 10% opacity
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  strong {
+    display: block;
+    font-weight: bold;
+    font-size: 2.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: $light-blue;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  font-size: 1.5rem;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .subtext {
+    margin: 0.75rem 0;
+    line-height: 150%;
+  }
+  .touch {
+    padding: 0.25rem 0;
+    font-weight: 500;
+    color: $dark-blue;
+  }
+  .links {
+    margin: 1rem 0;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    a {
+      color: $dark-blue;
+      font-size: 2rem;
+      &:hover,
+      &:focus {
+        color: $light-blue;
+      }
+
+      &:focus {
+        outline: 1px solid $dark-blue;
+      }
+    }
+  }
+}
+
+.about-me {
+  height: 100vh;
+  border: 1px solid red;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    width: 100%;
+    padding: 1.25rem;
+    position: relative;
+
+    .image-shadow {
+      width: 100%;
+      background: $light-blue 10%;
+      position: relative;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    img {
+      position: relative;
+      top: 1rem;
+      left: 1rem;
+      width: 100%;
+    }
+
+    .vertical {
+      height: 8px;
+      width: 30%;
+      background-color: blue;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .horizontal {
+      height: 30%;
+      width: 8px;
+      background-color: blue;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .text {
+    padding: 1rem;
+    margin: 0 auto;
+
+    p {
+      margin: 1rem 0;
+    }
+  }
+}
