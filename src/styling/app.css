@@ -340,6 +340,7 @@ textarea {
 
 body {
   font-family: "Poppins", sans-serif;
+  color: #2e333d;
 }
 
 h1 {
@@ -354,11 +355,18 @@ h1 strong {
 
 h2 {
   font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: bold;
 }
 
 p {
   font-size: 1rem;
   font-weight: 300;
+  line-height: 130%;
 }
 
 p strong {
@@ -368,12 +376,38 @@ p strong {
 
 a {
   text-decoration: none;
-  color: #2aa4e8;
+  color: #2e333d;
 }
 
 .wrapper {
   width: 90%;
   margin: 0 auto;
+}
+
+h2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.header-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+.header-container::before {
+  content: "";
+  width: 90%;
+  height: 100%;
+  background: #2aa4e8;
+  opacity: 10%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  z-index: 0;
 }
 
 .nav-bar {
@@ -509,32 +543,177 @@ a {
   margin: 0 auto;
 }
 
-.about-me .text h2 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.about-me .text .header-container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-}
-
-.about-me .text .header-container::before {
-  content: "";
-  width: 90%;
-  height: 100%;
-  background: #2aa4e8;
-  opacity: 10%;
-  position: absolute;
-  top: 30%;
-  left: 0;
-  z-index: 0;
-}
-
 .about-me .text p {
   margin: 1rem 0;
+}
+
+.projects {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.projects .cards {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .card {
+  width: 100%;
+  margin: 1.25rem 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px #e3e3e3, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #e3e3e3, -5px -5px 10px #ffffff;
+}
+
+.projects .text {
+  padding: 1rem;
+  height: 14rem;
+}
+
+.projects .text h3 {
+  font-weight: 400;
+}
+
+.projects .text .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0 0 0;
+  color: #0c214a;
+}
+
+.projects .text .tags p {
+  font-weight: 400;
+}
+
+.projects .text .tags:hover {
+  color: #2aa4e8;
+}
+
+.projects .text .live-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 1rem 0;
+}
+
+.projects .text .live-link:hover {
+  color: #2aa4e8;
+}
+
+.projects .text .github-repo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .image-wrapper {
+  border: 8px solid #2aa4e8;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.projects .image-wrapper:hover img {
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+}
+
+.projects img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.skills .category {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.skills .category h3 {
+  color: #2aa4e8;
+  font-weight: 500;
+}
+
+.skills .category li {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+
+.contact {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.contact h2 {
+  width: 100%;
+}
+
+.contact p {
+  margin: 1rem 0;
+}
+
+.contact .header-container {
+  width: 100%;
+  text-align: center;
+}
+
+.contact a {
+  font-size: 1.125rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  background: #2aa4e8;
+  border-radius: 20px;
+}
+
+.contact a:hover {
+  background: #0c214a;
+}
+
+footer {
+  padding: 1rem 0;
+  color: #ffffff;
+  background: #2aa4e8;
+}
+
+footer .wrapper {
+  text-align: center;
 }
