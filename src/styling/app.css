@@ -668,6 +668,17 @@ h2 {
   padding: 2rem 0;
 }
 
+.projects .header-container {
+  border: 1px solid red;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .projects .cards {
   margin: 2rem 0;
   display: -webkit-box;
@@ -794,7 +805,7 @@ h2 {
 
 @media (min-width: 1000px) {
   .projects .image-wrapper {
-    height: 15rem;
+    height: 20rem;
   }
 }
 
