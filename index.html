@@ -20,7 +20,7 @@
       <nav class="nav-bar">
         <div class="wrapper">
           <a href="/">👨🏾‍💻 Satvir</a>
-          <i data-feather="menu"></i>
+          <div class="jumps"></div>
         </div>
       </nav>
       <div class="header-wrapper">
@@ -35,31 +35,34 @@
         </div>
         <ul class="links">
           <li>
-            <a href="/"><i data-feather="github"></i></a>
+            <a href="/"><i class="fab fa-github"></i></a>
           </li>
 
           <li>
-            <a href="/" tabindex="0"><i data-feather="codepen"></i></a>
+            <a href="/" tabindex="0"><i class="fab fa-codepen"></i></a>
           </li>
 
           <li>
-            <a href="/"><i data-feather="twitter"></i></a>
+            <a href="/"><i class="fab fa-twitter"></i></a>
           </li>
         </ul>
       </div>
+      <a class="scroll" href="#about-me"
+        ><i class="fas fa-mouse"></i><i class="fas fa-hand-pointer"></i
+        ><span>scroll down for more</span></a
+      >
     </header>
     <section class="about-me" id="about-me">
       <div class="wrapper">
         <div class="image">
-          <img src="src/assets/IMG_3589.JPG" alt="" />
+          <img src="src/assets/me.JPG" alt="" />
 
           <div class="vertical"></div>
           <div class="horizontal"></div>
         </div>
         <div class="text">
-          <div class="header-container">
-            <h2>About Me</h2>
-          </div>
+          <h2>About Me</h2>
+
           <p>
             I'm a <strong>front-end</strong> software developer that loves
             creating beautiful and accessible web interfaces. I'm a front-end
@@ -75,39 +78,45 @@
     </section>
     <section class="projects" id="projects">
       <div class="wrapper">
-        <div class="header-container">
-          <h2>My Noteworthy Projects</h2>
-        </div>
+        <h2>My Noteworthy Projects</h2>
+
         <div class="cards">
           <div class="card card-1">
             <div class="image-wrapper">
-              <img src="https://source.unsplash.com/1200x800/?Canada" alt="" />
+              <img src="src/assets/apps-made-here.png" alt="" />
             </div>
             <div class="text">
               <a class="live-link" href="/">
-                <h3>Project One</h3>
-                <i data-feather="external-link"></i>
+                <h3>Apps Made Here</h3>
+                <i class="fas fa-external-link-alt"></i>
               </a>
-              <p>
+              <p class="small">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
                 iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Magnam, impedit!
               </p>
+              <p class="laptop">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam, impedit!Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Est, iure? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Magnam, impedit!
+              </p>
 
               <a href="/" class="tags">
                 <p>html / css / javascript</p>
-                <i data-feather="github"></i>
+                <i class="fab fa-github"></i>
               </a>
             </div>
           </div>
           <div class="card card-2">
             <div class="image-wrapper">
-              <img src="https://source.unsplash.com/1200x800/?nasa" alt="" />
+              <img src="src/assets/life-on-mars.png" alt="" />
             </div>
             <div class="text">
               <a class="live-link" href="/">
-                <h3>Project Two</h3>
-                <i data-feather="external-link"></i>
+                <h3>Life on Mars</h3>
+                <i class="fas fa-external-link-alt"></i>
               </a>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
@@ -117,18 +126,18 @@
 
               <a href="/" class="tags">
                 <p>html / css / javascript</p>
-                <i data-feather="github"></i>
+                <i class="fab fa-github"></i>
               </a>
             </div>
           </div>
           <div class="card card-3">
             <div class="image-wrapper">
-              <img src="https://source.unsplash.com/1200x800/?ocean" alt="" />
+              <img src="src/assets/a-million-ways.png" alt="" />
             </div>
             <div class="text">
               <a class="live-link" href="/">
-                <h3>Project Three</h3>
-                <i data-feather="external-link"></i>
+                <h3>Ways to a Million</h3>
+                <i class="fas fa-external-link-alt"></i>
               </a>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
@@ -138,31 +147,35 @@
 
               <a href="/" class="tags">
                 <p>html / css / javascript</p>
-                <i data-feather="github"></i>
+                <i class="fab fa-github"></i>
               </a>
             </div>
           </div>
           <div class="card card-4">
             <div class="image-wrapper">
-              <img
-                src="https://source.unsplash.com/1200x800/?technology"
-                alt=""
-              />
+              <img src="src/assets/is-the-book-better.png" alt="" />
             </div>
             <div class="text">
               <a class="live-link" href="/">
-                <h3>Project Four</h3>
-                <i data-feather="external-link"></i>
+                <h3>Is The Book Better?</h3>
+                <i class="fas fa-external-link-alt"></i>
               </a>
-              <p>
+              <p class="small">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
                 iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Magnam, impedit!
               </p>
+              <p class="laptop">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam, impedit!Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Est, iure? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Magnam, impedit!
+              </p>
 
               <a href="/" class="tags">
                 <p>html / css / javascript</p>
-                <i data-feather="github"></i>
+                <i class="fab fa-github"></i>
               </a>
             </div>
           </div>
@@ -171,9 +184,8 @@
     </section>
     <section class="skills" id="skills">
       <div class="wrapper">
-        <div class="header-container">
-          <h2>Skills</h2>
-        </div>
+        <h2>Skills</h2>
+
         <div class="categories">
           <div class="category">
             <h3>Core</h3>
@@ -216,9 +228,8 @@
     </section>
     <section class="contact">
       <div class="wrapper">
-        <div class="header-container">
-          <h2>Let's Get in Touch!</h2>
-        </div>
+        <h2>Let's Get in Touch!</h2>
+
         <p>
           Interested in working together, collborating on a project, or need a
           website? Feel free to contact me!
