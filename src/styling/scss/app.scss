@@ -6,6 +6,8 @@ $black: #2e333d;
 $gray: #e5e5e5;
 $dark-blue: #0c214a;
 $light-blue: #2aa4e8;
+$lightest-blue: rgba(42, 164, 232, 0.1);
+$blue-gradient: linear-gradient(90deg, $light-blue, $white);
 
 body {
   font-family: "Poppins", sans-serif;
@@ -24,11 +26,11 @@ h1 {
     font-size: 1.9rem;
   }
   @include responsiveMedia(iPad) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   @include responsiveMedia(laptop) {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -45,7 +47,7 @@ h2 {
   }
 
   @include responsiveMedia(laptop) {
-    // font-size: 2.4rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -103,11 +105,6 @@ a {
 h2 {
   position: relative;
   width: fit-content;
-}
-
-.header-container {
-  width: fit-content;
-  position: relative;
   &::before {
     content: "";
     width: 90%;
@@ -137,6 +134,85 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+
+  .scroll {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    i {
+      padding: 0 0 0.5rem 0;
+      animation: 5s infinite boing;
+
+      @keyframes boing {
+        0% {
+          transform: translate(0, -0) scale(1);
+        }
+
+        30% {
+          transform: translate(0, -0) scale(1);
+        }
+
+        50% {
+          transform: translate(0, -15px) scale(1.1);
+        }
+
+        70% {
+          transform: translate(0, -0) scale(1);
+        }
+
+        100% {
+          transform: translate(0, -0) scale(1);
+        }
+      }
+    }
+
+    span {
+      animation: 5s infinite stretch;
+      @keyframes stretch {
+        0% {
+          transform: translate(0, 0);
+        }
+
+        30% {
+          transform: translate(0, 0);
+          letter-spacing: 0rem;
+        }
+
+        50% {
+          transform: translate(0, -15px);
+          letter-spacing: 0.05rem;
+        }
+
+        70% {
+          transform: translate(0, 0);
+          letter-spacing: 0rem;
+        }
+
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+
+    .fa-mouse {
+      display: none;
+    }
+    @include responsiveMedia(iPad) {
+      .fa-mouse {
+        display: block;
+      }
+
+      .fa-hand-pointer {
+        display: none;
+      }
+    }
+  }
 
   .header-wrapper {
     display: flex;
@@ -174,13 +250,57 @@ h2 {
     a {
       color: $dark-blue;
       font-size: 2rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
       &:hover,
       &:focus {
         color: $light-blue;
+        &::before {
+          content: "@satv1r";
+          // background: $light-blue;
+          color: $dark-blue;
+          font-size: 1rem;
+          background: $blue-gradient;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: translate(-100%, 0);
+          width: 0rem;
+          height: 100%;
+          border-radius: 20px 0 0 20px;
+          animation: 0.25s ease-out forwards unroll;
+
+          @keyframes unroll {
+            0% {
+              width: 0%;
+            }
+
+            100% {
+              width: 7rem;
+            }
+          }
+        }
       }
 
       &:focus {
         outline: 1px solid $dark-blue;
+      }
+
+      i:hover {
+        animation: 0.25s forwards rolling;
+        @keyframes rolling {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
       }
     }
 
@@ -266,12 +386,27 @@ h2 {
 
 .projects {
   min-height: 100vh;
-  padding: 2rem 0;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  background-color: $lightest-blue;
+
+  h2 {
+    padding: 1rem 0 0.5rem 0;
+    text-align: center;
+    width: 100%;
+    &::before {
+      display: none;
+    }
+  }
 
   .cards {
-    margin: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
+
+    .laptop {
+      display: none;
+    }
 
     @include responsiveMedia(iPad) {
       justify-content: space-between;
@@ -283,7 +418,36 @@ h2 {
       .card-1,
       .card-4 {
         width: 60%;
+        position: relative;
       }
+
+      .small {
+        display: none;
+      }
+
+      .laptop {
+        display: block;
+      }
+      //     a {
+      //       color: $white;
+      //     }
+
+      //     .image-wrapper {
+      //       // display: none;
+      //       height: 100%;
+      //       border-radius: 10px 10px 10px 10px;
+      //     }
+
+      //     .text {
+      //       background: $black;
+      //       color: $white;
+      //       position: absolute;
+      //       top: 50%;
+      //       left: 50%;
+      //       width: 100%;
+      //       transform: translate(-50%, -50%);
+      //     }
+      //   }
 
       .card-2,
       .card-3 {
@@ -296,7 +460,7 @@ h2 {
     width: 100%;
     margin: 1.25rem 0;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px #e3e3e3, -5px -5px 10px #ffffff;
+    box-shadow: 5px 5px 10px #e3e3e3, -5px -5px 10px rgba(42, 164, 232, 0.1);
     position: relative;
 
     @include responsiveMedia(iPad) {
@@ -358,7 +522,7 @@ h2 {
     }
 
     @include responsiveMedia(smallLaptop) {
-      height: 15rem;
+      height: 20rem;
     }
   }
 
@@ -409,6 +573,9 @@ h2 {
 
   h2 {
     width: 100%;
+    &::before {
+      display: none;
+    }
   }
 
   p {
