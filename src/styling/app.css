@@ -344,30 +344,36 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 h1 strong {
   display: block;
   font-weight: bold;
-  font-size: 150%;
+  font-size: 140%;
 }
 
 @media (min-width: 375px) {
   h1 {
     font-size: 1.9rem;
   }
+  h1 strong {
+    font-size: 160%;
+  }
 }
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  h1 strong {
+    font-size: 180%;
   }
 }
 
 @media (min-width: 1280px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -467,13 +473,26 @@ h2::before {
 }
 
 .nav-bar {
-  margin: 1rem 0 0 0;
+  margin: 2rem 0 0 0;
+}
+
+.nav-bar .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (min-width: 768px) {
   .nav-bar .burger {
     display: none;
   }
+}
+
+.nav-bar .filler {
+  visibility: hidden;
 }
 
 .nav-bar .main-nav {
@@ -497,16 +516,18 @@ h2::before {
   }
 }
 
-.nav-bar a {
-  padding: 0.25rem 1rem;
-  margin: 0 0.5rem;
+.nav-bar .main-nav a {
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.4rem;
   font-size: 1.25rem;
 }
 
-.nav-bar a:hover, .nav-bar a:focus {
+.nav-bar .main-nav a:hover, .nav-bar .main-nav a:focus {
   background: #2aa4e8;
   color: #ffffff;
   border-radius: 30px;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
 .header {
@@ -648,6 +669,11 @@ h2::before {
   color: #0c214a;
 }
 
+.header .email {
+  color: #2aa4e8;
+  text-decoration: underline;
+}
+
 .header .links {
   margin: 1rem 0;
   display: -webkit-box;
@@ -679,7 +705,7 @@ h2::before {
   .header .links a:hover::before, .header .links a:focus::before {
     content: "satv1r";
     background: #2aa4e8;
-    color: #0c214a;
+    color: #ffffff;
     font-size: 1rem;
     position: absolute;
     top: 0;
@@ -825,7 +851,7 @@ h2::before {
   }
   .about-me .wrapper .image,
   .about-me .wrapper .text {
-    width: 47.5%;
+    width: 35%;
   }
 }
 
