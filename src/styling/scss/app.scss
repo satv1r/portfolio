@@ -15,22 +15,28 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   strong {
     display: block;
     font-weight: bold;
-    font-size: 150%;
+    font-size: 140%;
   }
 
   @include responsiveMedia(iPhone) {
+    strong {
+      font-size: 160%;
+    }
     font-size: 1.9rem;
   }
   @include responsiveMedia(iPad) {
-    font-size: 3rem;
+    strong {
+      font-size: 180%;
+    }
+    font-size: 2.5rem;
   }
 
   @include responsiveMedia(laptop) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -119,7 +125,12 @@ h2 {
 }
 
 .nav-bar {
-  margin: 1rem 0 0 0;
+  margin: 2rem 0 0 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .burger {
     @include responsiveMedia(iPad) {
@@ -127,20 +138,26 @@ h2 {
     }
   }
 
+  .filler {
+    visibility: hidden;
+  }
+
   .main-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
-
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
     @include responsiveMedia(iPad) {
       display: flex;
     }
   }
 
-  a {
-    padding: 0.25rem 1rem;
-    margin: 0 0.5rem;
+  .main-nav a {
+    padding: 0.25rem 0.75rem;
+    margin: 0 0.4rem;
     font-size: 1.25rem;
 
     &:hover,
@@ -148,6 +165,7 @@ h2 {
       background: $light-blue;
       color: $white;
       border-radius: 30px;
+      transition: 0.15s ease-in-out;
     }
   }
 }
@@ -232,6 +250,11 @@ h2 {
     font-weight: 500;
     color: $dark-blue;
   }
+
+  .email {
+    color: $light-blue;
+    text-decoration: underline;
+  }
   .links {
     margin: 1rem 0;
     display: flex;
@@ -251,7 +274,7 @@ h2 {
           &::before {
             content: "satv1r";
             background: $light-blue;
-            color: $dark-blue;
+            color: $white;
             font-size: 1rem;
             // background: $light-blue;
             position: absolute;
@@ -332,11 +355,10 @@ h2 {
     align-items: center;
 
     @include responsiveMedia(iPad) {
-      // width: 80%;
       flex-direction: row;
       .image,
       .text {
-        width: 47.5%;
+        width: 35%;
       }
     }
   }
