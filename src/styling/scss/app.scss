@@ -420,16 +420,13 @@ h2 {
   background-color: $lightest-blue;
 
   h2 {
-    padding: 1rem 0 0.5rem 0;
-    text-align: center;
-    width: 100%;
-    &::before {
-      display: none;
-    }
+    margin: 2rem 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .cards {
-    padding: 1rem 0;
     display: flex;
     flex-direction: column;
 
@@ -498,7 +495,7 @@ h2 {
   }
 
   .text {
-    padding: 1rem;
+    padding: 1.75rem;
     h3 {
       font-weight: 400;
     }
