@@ -119,14 +119,37 @@ h2 {
 }
 
 .nav-bar {
-  font-size: 1.5rem;
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 1rem 0 0 0;
+
+  .burger {
+    @include responsiveMedia(iPad) {
+      display: none;
+    }
   }
-  margin: 1rem 0;
-  margin-bottom: 2rem;
+
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    @include responsiveMedia(iPad) {
+      display: flex;
+    }
+  }
+
+  a {
+    padding: 0.25rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+
+    &:hover,
+    &:focus {
+      background: $light-blue;
+      color: $white;
+      border-radius: 30px;
+    }
+  }
 }
 
 .header {
@@ -145,59 +168,32 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    i {
-      padding: 0 0 0.5rem 0;
-      animation: 5s infinite boing;
+    animation: 5s infinite boing;
 
-      @keyframes boing {
-        0% {
-          transform: translate(0, -0) scale(1);
-        }
+    @keyframes boing {
+      0% {
+        transform: translate(-50%, -100%) scale(1);
+      }
 
-        30% {
-          transform: translate(0, -0) scale(1);
-        }
+      30% {
+        transform: translate(-50%, -100%) scale(1);
+      }
 
-        50% {
-          transform: translate(0, -15px) scale(1.1);
-        }
+      50% {
+        transform: translate(-50%, -115%) scale(1.1);
+      }
 
-        70% {
-          transform: translate(0, -0) scale(1);
-        }
+      70% {
+        transform: translate(-50%, -100%) scale(1);
+      }
 
-        100% {
-          transform: translate(0, -0) scale(1);
-        }
+      100% {
+        transform: translate(-50%, -100%) scale(1);
       }
     }
 
-    span {
-      animation: 5s infinite stretch;
-      @keyframes stretch {
-        0% {
-          transform: translate(0, 0);
-        }
-
-        30% {
-          transform: translate(0, 0);
-          letter-spacing: 0rem;
-        }
-
-        50% {
-          transform: translate(0, -15px);
-          letter-spacing: 0.05rem;
-        }
-
-        70% {
-          transform: translate(0, 0);
-          letter-spacing: 0rem;
-        }
-
-        100% {
-          transform: translate(0, 0);
-        }
-      }
+    i {
+      padding: 0 0 0.5rem 0;
     }
 
     .fa-mouse {
@@ -227,12 +223,6 @@ h2 {
     }
   }
 
-  .core {
-    @include responsiveMedia(iPad) {
-      // width: 80%;
-    }
-  }
-
   .subtext {
     margin: 0.75rem 0;
     line-height: 150%;
@@ -255,32 +245,35 @@ h2 {
       justify-content: center;
       &:hover,
       &:focus {
+        // background-color: $light-blue;
         color: $light-blue;
-        &::before {
-          content: "@satv1r";
-          // background: $light-blue;
-          color: $dark-blue;
-          font-size: 1rem;
-          background: $blue-gradient;
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transform: translate(-100%, 0);
-          width: 0rem;
-          height: 100%;
-          border-radius: 20px 0 0 20px;
-          animation: 0.25s ease-out forwards unroll;
+        @include responsiveMedia(iPad) {
+          &::before {
+            content: "satv1r";
+            background: $light-blue;
+            color: $dark-blue;
+            font-size: 1rem;
+            // background: $light-blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-105%, 0);
+            width: 0rem;
+            height: 100%;
+            border-radius: 20px 20px 20px 20px;
+            animation: 0.25s ease-out forwards unroll;
 
-          @keyframes unroll {
-            0% {
-              width: 0%;
-            }
+            @keyframes unroll {
+              0% {
+                width: 0%;
+              }
 
-            100% {
-              width: 7rem;
+              100% {
+                width: 7rem;
+              }
             }
           }
         }
@@ -288,6 +281,20 @@ h2 {
 
       &:focus {
         outline: 1px solid $dark-blue;
+      }
+
+      i {
+        animation: 0.25s roll-up;
+        transform: rotate(-360deg);
+        @keyframes roll-up {
+          0% {
+            transform: rotate(0);
+          }
+
+          100% {
+            transform: rotate(-360deg);
+          }
+        }
       }
 
       i:hover {
