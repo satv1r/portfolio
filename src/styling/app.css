@@ -533,22 +533,18 @@ h2::before {
 
 .nav-bar .main-nav a:hover::after, .nav-bar .main-nav a:focus::after {
   content: "";
-  -webkit-transition: 1s;
-  transition: 1s;
   width: 0.1rem;
   height: 0.1rem;
-  background: #2aa4e8;
   position: absolute;
   top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 3.5rem);
           transform: translate(-50%, 3.5rem);
-  background-image: url("../assets/me.JPG");
   background-size: cover;
   background-position: center;
-  border: 8px solid #2aa4e8;
-  -webkit-animation: 0.25s ease-in-out preview forwards;
-          animation: 0.25s ease-in-out preview forwards;
+  border: 5px solid #2aa4e8;
+  -webkit-animation: 0.15s ease-in-out preview forwards;
+          animation: 0.15s ease-in-out preview forwards;
 }
 
 @-webkit-keyframes preview {
@@ -575,6 +571,22 @@ h2::before {
     height: 9rem;
     border-radius: 20px;
   }
+}
+
+.nav-bar .nav-home:focus::after, .nav-bar .nav-home:hover::after {
+  background-image: url("../assets/home.png");
+}
+
+.nav-bar .nav-about::after {
+  background-image: url("../assets/about.png");
+}
+
+.nav-bar .nav-projects::after {
+  background-image: url("../assets/projects.png");
+}
+
+.nav-bar .nav-contact::after {
+  background-image: url("../assets/contact.png");
 }
 
 .header {
