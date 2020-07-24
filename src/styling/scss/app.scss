@@ -147,9 +147,6 @@ h2 {
     justify-content: center;
     align-items: center;
     display: none;
-    // position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
     @include responsiveMedia(iPad) {
       display: flex;
     }
@@ -159,13 +156,67 @@ h2 {
     padding: 0.25rem 0.75rem;
     margin: 0 0.4rem;
     font-size: 1.25rem;
+    border-radius: 30px;
+    position: relative;
 
     &:hover,
     &:focus {
       background: $light-blue;
       color: $white;
-      border-radius: 30px;
       transition: 0.15s ease-in-out;
+
+      &::after {
+        content: "";
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 3.5rem);
+        background-size: cover;
+        background-position: center;
+        border: 5px solid $light-blue;
+
+        animation: 0.15s ease-in-out preview forwards;
+
+        @keyframes preview {
+          0% {
+            width: 0.1rem;
+            height: 0.1rem;
+            border-radius: 50%;
+          }
+
+          100% {
+            width: 16rem;
+            height: 9rem;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-home {
+    &:focus,
+    &:hover {
+      &::after {
+        background-image: url("../assets/home.png");
+      }
+    }
+  }
+  .nav-about {
+    &::after {
+      background-image: url("../assets/about.png");
+    }
+  }
+  .nav-projects {
+    &::after {
+      background-image: url("../assets/projects.png");
+    }
+  }
+  .nav-contact {
+    &::after {
+      background-image: url("../assets/contact.png");
     }
   }
 }
@@ -573,7 +624,7 @@ h2 {
     }
 
     @include responsiveMedia(iPad) {
-      width: 45%;
+      width: 18%;
     }
   }
 
@@ -584,7 +635,7 @@ h2 {
     @include responsiveMedia(iPad) {
       flex-wrap: wrap;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
     }
   }
 }

@@ -520,14 +520,73 @@ h2::before {
   padding: 0.25rem 0.75rem;
   margin: 0 0.4rem;
   font-size: 1.25rem;
+  border-radius: 30px;
+  position: relative;
 }
 
 .nav-bar .main-nav a:hover, .nav-bar .main-nav a:focus {
   background: #2aa4e8;
   color: #ffffff;
-  border-radius: 30px;
   -webkit-transition: 0.15s ease-in-out;
   transition: 0.15s ease-in-out;
+}
+
+.nav-bar .main-nav a:hover::after, .nav-bar .main-nav a:focus::after {
+  content: "";
+  width: 0.1rem;
+  height: 0.1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 3.5rem);
+          transform: translate(-50%, 3.5rem);
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #2aa4e8;
+  -webkit-animation: 0.15s ease-in-out preview forwards;
+          animation: 0.15s ease-in-out preview forwards;
+}
+
+@-webkit-keyframes preview {
+  0% {
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+  }
+  100% {
+    width: 16rem;
+    height: 9rem;
+    border-radius: 20px;
+  }
+}
+
+@keyframes preview {
+  0% {
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+  }
+  100% {
+    width: 16rem;
+    height: 9rem;
+    border-radius: 20px;
+  }
+}
+
+.nav-bar .nav-home:focus::after, .nav-bar .nav-home:hover::after {
+  background-image: url("../assets/home.png");
+}
+
+.nav-bar .nav-about::after {
+  background-image: url("../assets/about.png");
+}
+
+.nav-bar .nav-projects::after {
+  background-image: url("../assets/projects.png");
+}
+
+.nav-bar .nav-contact::after {
+  background-image: url("../assets/contact.png");
 }
 
 .header {
@@ -1084,7 +1143,7 @@ h2::before {
 
 @media (min-width: 768px) {
   .skills .category {
-    width: 45%;
+    width: 18%;
   }
 }
 
@@ -1106,9 +1165,9 @@ h2::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
