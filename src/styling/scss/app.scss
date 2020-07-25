@@ -9,6 +9,10 @@ $light-blue: #2aa4e8;
 $lightest-blue: rgba(42, 164, 232, 0.1);
 $blue-gradient: linear-gradient(90deg, $light-blue, $white);
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: $black;
@@ -466,12 +470,12 @@ h2 {
 
 .projects {
   min-height: 100vh;
-  margin: 2rem 0;
-  padding: 1rem 0;
+  margin: 5rem 0;
+  padding: 8rem 0 10rem 0;
   background-color: $lightest-blue;
 
   h2 {
-    margin: 2rem 0;
+    margin: 0 0 6rem 0;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -649,10 +653,9 @@ h2 {
   }
 
   h2 {
-    width: 100%;
-    &::before {
-      display: none;
-    }
+    // width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   p {

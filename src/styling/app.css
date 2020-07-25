@@ -338,6 +338,10 @@ textarea {
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #2e333d;
@@ -966,13 +970,13 @@ h2::before {
 
 .projects {
   min-height: 100vh;
-  margin: 2rem 0;
-  padding: 1rem 0;
+  margin: 5rem 0;
+  padding: 8rem 0 10rem 0;
   background-color: rgba(42, 164, 232, 0.1);
 }
 
 .projects h2 {
-  margin: 2rem 0;
+  margin: 0 0 6rem 0;
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1183,11 +1187,9 @@ h2::before {
 }
 
 .contact h2 {
-  width: 100%;
-}
-
-.contact h2::before {
-  display: none;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .contact p {
