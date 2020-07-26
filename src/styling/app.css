@@ -1044,6 +1044,114 @@ h2::before {
   }
 }
 
+.projects .card a {
+  color: #0c214a;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects .card a:hover, .projects .card a:focus {
+  color: #2aa4e8;
+}
+
+@media (min-width: 768px) {
+  .projects .card a:hover::before, .projects .card a:focus::before {
+    background: #2aa4e8;
+    color: #ffffff;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translate(-50%, 25%);
+            transform: translate(-50%, 25%);
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: 2rem;
+    height: 0rem;
+    border-radius: 20px 20px 20px 20px;
+    -webkit-animation: 0.25s ease-out forwards unroll;
+            animation: 0.25s ease-out forwards unroll;
+  }
+  @-webkit-keyframes unroll {
+    0% {
+      height: 0rem;
+    }
+    100% {
+      height: 12rem;
+    }
+  }
+  @keyframes unroll {
+    0% {
+      height: 0rem;
+    }
+    100% {
+      height: 12rem;
+    }
+  }
+}
+
+.projects .card a:focus {
+  outline: 1px solid #0c214a;
+}
+
+.projects .card a i {
+  -webkit-animation: 0.25s roll-up;
+          animation: 0.25s roll-up;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+@keyframes roll-up {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+.projects .card a i:hover {
+  -webkit-animation: 0.25s forwards rolling;
+          animation: 0.25s forwards rolling;
+}
+
+@keyframes rolling {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.projects .card .live-link:hover::before, .projects .card .live-link:focus::before {
+  content: "Website";
+}
+
+.projects .card .repo-link:hover::before, .projects .card .repo-link:focus::before {
+  content: "GitHub";
+}
+
 .projects .text {
   padding: 1.75rem;
 }
