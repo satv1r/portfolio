@@ -473,7 +473,7 @@ h2 {
 .projects {
   min-height: 100vh;
   margin: 5rem 0;
-  padding: 8rem 0 10rem 0;
+  padding: 8rem 0 8rem 0;
   background-color: $lightest-blue;
 
   h2 {
@@ -621,12 +621,6 @@ h2 {
     height: 15rem;
     overflow: hidden;
 
-    &:hover {
-      img {
-        transform: scale(1.125);
-      }
-    }
-
     @include responsiveMedia(smallLaptop) {
       height: 20rem;
     }
@@ -642,7 +636,7 @@ h2 {
 .skills {
   padding-bottom: 3rem;
   h2 {
-    margin: 3rem 0;
+    margin: 6rem 0 5rem 0;
   }
   .category {
     margin: 2rem 0;
@@ -675,7 +669,7 @@ h2 {
 
 .contact {
   text-align: center;
-  margin: 3rem 0 2rem 0;
+  margin: 3rem 0 3rem 0;
 
   @include responsiveMedia(iPad) {
     margin: 5rem 0;

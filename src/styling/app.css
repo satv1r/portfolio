@@ -971,7 +971,7 @@ h2::before {
 .projects {
   min-height: 100vh;
   margin: 5rem 0;
-  padding: 8rem 0 10rem 0;
+  padding: 8rem 0 8rem 0;
   background-color: rgba(42, 164, 232, 0.1);
 }
 
@@ -1106,11 +1106,6 @@ h2::before {
   overflow: hidden;
 }
 
-.projects .image-wrapper:hover img {
-  -webkit-transform: scale(1.125);
-          transform: scale(1.125);
-}
-
 @media (min-width: 1000px) {
   .projects .image-wrapper {
     height: 20rem;
@@ -1129,7 +1124,7 @@ h2::before {
 }
 
 .skills h2 {
-  margin: 3rem 0;
+  margin: 6rem 0 5rem 0;
 }
 
 .skills .category {
@@ -1179,7 +1174,7 @@ h2::before {
 
 .contact {
   text-align: center;
-  margin: 3rem 0 2rem 0;
+  margin: 3rem 0 3rem 0;
 }
 
 @media (min-width: 768px) {
