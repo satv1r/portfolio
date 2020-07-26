@@ -442,7 +442,7 @@ p {
 
 p strong {
   font-weight: 700;
-  color: #2aa4e8;
+  color: #1672a4;
 }
 
 a {
@@ -468,7 +468,7 @@ h2::before {
   content: "";
   width: 90%;
   height: 100%;
-  background: #2aa4e8;
+  background: #1672a4;
   opacity: 10%;
   position: absolute;
   top: 30%;
@@ -529,7 +529,7 @@ h2::before {
 }
 
 .nav-bar .main-nav a:hover, .nav-bar .main-nav a:focus {
-  background: #2aa4e8;
+  background: #1672a4;
   color: #ffffff;
   -webkit-transition: 0.15s ease-in-out;
   transition: 0.15s ease-in-out;
@@ -546,7 +546,7 @@ h2::before {
           transform: translate(-50%, 3.5rem);
   background-size: cover;
   background-position: center;
-  border: 5px solid #2aa4e8;
+  border: 5px solid #1672a4;
   -webkit-animation: 0.15s ease-in-out preview forwards;
           animation: 0.15s ease-in-out preview forwards;
 }
@@ -733,7 +733,7 @@ h2::before {
 }
 
 .header .email {
-  color: #2aa4e8;
+  color: #1672a4;
   text-decoration: underline;
 }
 
@@ -761,13 +761,13 @@ h2::before {
 }
 
 .header .links a:hover, .header .links a:focus {
-  color: #2aa4e8;
+  color: #1672a4;
 }
 
 @media (min-width: 768px) {
   .header .links a:hover::before, .header .links a:focus::before {
     content: "satv1r";
-    background: #2aa4e8;
+    background: #1672a4;
     color: #ffffff;
     font-size: 1rem;
     position: absolute;
@@ -931,7 +931,7 @@ h2::before {
   position: absolute;
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
-  background-color: #2aa4e8;
+  background-color: #1672a4;
   opacity: 10%;
 }
 
@@ -944,7 +944,7 @@ h2::before {
 .about-me .image .vertical {
   height: 8px;
   width: 30%;
-  background-color: #2aa4e8;
+  background-color: #1672a4;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -953,7 +953,7 @@ h2::before {
 .about-me .image .horizontal {
   height: 30%;
   width: 8px;
-  background-color: #2aa4e8;
+  background-color: #1672a4;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1045,7 +1045,7 @@ h2::before {
 }
 
 .projects a:hover, .projects a:focus {
-  color: #2aa4e8;
+  color: #1672a4;
 }
 
 .projects a:focus {
@@ -1091,7 +1091,7 @@ h2::before {
 
 .projects .text .tags {
   margin: 0.5rem 0;
-  color: #2aa4e8;
+  color: #1672a4;
 }
 
 .projects .text .github-repo {
@@ -1107,7 +1107,7 @@ h2::before {
 }
 
 .projects .image-wrapper {
-  border: 8px solid #2aa4e8;
+  border: 8px solid #1672a4;
   border-radius: 10px 10px 0 0;
   width: 100%;
   height: 15rem;
@@ -1141,7 +1141,7 @@ h2::before {
 }
 
 .skills .category h3 {
-  color: #2aa4e8;
+  color: #1672a4;
   font-weight: 500;
 }
 
@@ -1221,7 +1221,7 @@ h2::before {
           align-items: center;
   color: #ffffff;
   padding: 1rem 1.5rem;
-  background: #2aa4e8;
+  background: #1672a4;
   border-radius: 20px;
 }
 
@@ -1232,7 +1232,7 @@ h2::before {
 footer {
   padding: 1rem 0;
   color: #ffffff;
-  background: #2aa4e8;
+  background: #1672a4;
 }
 
 footer .wrapper {
