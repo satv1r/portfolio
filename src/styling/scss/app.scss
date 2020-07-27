@@ -128,6 +128,10 @@ h2 {
   }
 }
 
+nav .hamburger-menu {
+  display: none;
+}
+
 .nav-bar {
   margin: 2rem 0 0 0;
 
@@ -728,5 +732,105 @@ footer {
   }
   p {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav .hamburger-menu {
+    display: block;
+  }
+
+  .patty1,
+  .patty2,
+  .patty3 {
+    width: 3rem;
+    height: 0.15rem;
+    background-color: $light-blue;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    z-index: 11;
+  }
+
+  .patty2 {
+    top: 2.25rem;
+  }
+
+  .patty3 {
+    top: 3rem;
+  }
+
+  nav .hamburger-menu input {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+    z-index: 12;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  nav .hamburger-menu .menu {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    margin: 0 auto;
+    top: 0px;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  nav .hamburger-menu .menu a {
+    color: white;
+  }
+
+  nav .hamburger-menu .menu ul {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  nav .hamburger-menu .menu li {
+    font-size: 2rem;
+
+    margin-bottom: 2rem;
+  }
+
+  nav .hamburger-menu input {
+    &:focus {
+      outline: 1px solid $light-blue;
+    }
+  }
+
+  nav .hamburger-menu input:checked ~ .menu {
+    visibility: visible;
+  }
+
+  nav .hamburger-menu input:checked ~ .menu li {
+    display: block;
+  }
+
+  nav .hamburger-menu input:checked ~ .burger .patty1 {
+    transition: ease 0.4s;
+    transform: translateY(0.75rem) rotate(135deg);
+  }
+
+  nav .hamburger-menu input:checked ~ .burger .patty2 {
+    transition: ease 0.4s;
+    transform: rotate(45deg);
+  }
+
+  nav .hamburger-menu input:checked ~ .burger .patty3 {
+    transition: ease 0.4s;
+    transform: translateY(-0.75rem) rotate(45deg);
   }
 }
